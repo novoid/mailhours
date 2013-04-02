@@ -1,0 +1,75 @@
+## Time-stamp: <2013-04-02 18:20:33 vk>
+## -*- coding: utf-8 -*-
+## This file is best viewed with GNU Emacs Org-mode: http://orgmode.org/
+
+* mailhours (shell script)
+
+mailhours: no querystring found, displaying helpscreen
+
+syntax:  mailhours QUERYSTRING [DIRECTORY] [DESCRIPTION]
+
+mailhours searches for emails in ~/home/USER/Maildir/.tmp/cur~ or
+[DIRECTORY] with QUERYSTRING in the From-lines.
+
+A graph will be generated that shows at what hours the correspondent
+emails from this querystring were sent.
+
+Then you know when this person is typically sending email answers.
+
+Configuration is done in the files:
+:   ./mailhours
+                  ... general defaults
+:   /home/USER/.config/mailhoursrc
+                  ... to override general defaults
+
+examples:
+:     mailhours Torvalds
+         ... generates a graph when Linux Torvalds
+             sends emails in my DEFAULTDIR folder
+:     mailhours Gates ~/Maildir/.spam/cur
+         ... generates a graph when Bill Gates
+             sends his emails that are stored in
+             the folder ~/Maildir/.spam/cur
+
+** Why
+
+People tend to answer emails following a certain pattern. One person
+might answer emails after lunch, others do it in the morning. 
+
+If you want to visualize the pattern of a person, you can use emails
+send by her/his using this script.
+
+** Configuration file example
+
+A ~/.config/mailhoursrc file might look like this:
+
+: ## ===================================================
+: ## purpose: analyze emails of communications partners
+: ##          to know, at what hours they usually send 
+: ##          their emails
+: ## author:  Karl Voit <shellscript@Karl-Voit.at>
+: ## see scriptfile vkmailhours (in your path) for details
+: ## ===================================================
+: 
+: ## view the result with this command
+: VIEWPROGRAM=xview
+: 
+: ## if par2 is missing, this is the default Maildir directory
+: DEFAULTDIR="${HOME}/Maildir/.tmp/cur"
+: 
+: ## end config
+
+* Contribute!
+
+I am looking for your ideas!
+
+If you want to contribute to this cool project, please fork and
+contribute!
+
+
+* Local Variables                                                  :noexport:
+# Local Variables:
+# mode: auto-fill
+# mode: flyspell
+# eval: (ispell-change-dictionary "en_US")
+# End:
