@@ -1,4 +1,4 @@
-## Time-stamp: <2013-04-02 18:20:33 vk>
+## Time-stamp: <2013-04-02 18:33:38 vk>
 ## -*- coding: utf-8 -*-
 ## This file is best viewed with GNU Emacs Org-mode: http://orgmode.org/
 
@@ -38,6 +38,11 @@ might answer emails after lunch, others do it in the morning.
 
 If you want to visualize the pattern of a person, you can use emails
 send by her/his using this script.
+
+** Example result
+
+#+CAPTION: This is an example result image of a mailhours query
+[[Example.png]]
 
 ** Configuration file example
 
