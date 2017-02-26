@@ -1,10 +1,8 @@
-## Time-stamp: <2013-04-02 18:33:38 vk>
+## Time-stamp: <2017-02-26 16:28:38 vk>
 ## -*- coding: utf-8 -*-
 ## This file is best viewed with GNU Emacs Org-mode: http://orgmode.org/
 
 * mailhours (shell script)
-
-mailhours: no querystring found, displaying helpscreen
 
 syntax:  mailhours QUERYSTRING [DIRECTORY] [DESCRIPTION]
 
@@ -34,7 +32,7 @@ examples:
 ** Why
 
 People tend to answer emails following a certain pattern. One person
-might answer emails after lunch, others do it in the morning. 
+might answer emails after lunch, others do it in the morning.
 
 If you want to visualize the pattern of a person, you can use emails
 send by her/his using this script.
@@ -50,19 +48,27 @@ A ~/.config/mailhoursrc file might look like this:
 
 : ## ===================================================
 : ## purpose: analyze emails of communications partners
-: ##          to know, at what hours they usually send 
+: ##          to know, at what hours they usually send
 : ##          their emails
 : ## author:  Karl Voit <shellscript@Karl-Voit.at>
-: ## see scriptfile vkmailhours (in your path) for details
+: ## see scriptfile mailhours (in your path) for details
 : ## ===================================================
-: 
+:
 : ## view the result with this command
 : VIEWPROGRAM=xview
-: 
+:
 : ## if par2 is missing, this is the default Maildir directory
 : DEFAULTDIR="${HOME}/Maildir/.tmp/cur"
-: 
+:
 : ## end config
+
+** Dependencies
+
+[[http://www.gnuplot.info/][gnuplot]]
+
+A tool for displaying PNG files. By default, =geeqie= is configured.
+
+GNU-tools like: sed, awk, (e)grep, sort, uniq, head
 
 * Contribute!
 
